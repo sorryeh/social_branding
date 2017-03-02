@@ -1,0 +1,30 @@
+build
+.vagrant
+.DS_Store
+/.bundle
+
+cscope.out
+tags
+
+# Log and temp file
+/log/*
+/tmp
+/config/secrets.json
+/.env
+
+# Ignore test coverage results.
+coverage
+
+# Ruby
+*.gem
+*.rbc
+/.config
+*.lock
+doc/
+pkg
+rdoc
+*.log
+
+
+# Temporary LICENSE ignore
+LICENSE.txt
