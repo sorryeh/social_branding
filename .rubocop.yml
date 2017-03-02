@@ -1,2 +1,136 @@
-inherit_from:
-  - http://shopify.github.io/ruby-style-guide/rubocop.yml
+AllCops:
+  TargetRubyVersion: 2.3
+  Exclude:
+    - 'lib/patches/*'
+    - 'db/schema.rb'
+    - 'bin/*'
+
+Rails:
+  Enabled: true
+
+# RSpec
+require: rubocop-rspec
+
+RSpec/AnyInstance:
+  Enabled: false
+
+RSpec/DescribedClass:
+  Enabled: false
+
+RSpec/FilePath:
+  Enabled: false
+
+RSpec/DescribeClass:
+  Enabled: false
+
+# Shopify core rules
+
+Lint/AssignmentInCondition:
+  Enabled: false
+
+Style/ClassAndModuleChildren:
+  Enabled: false
+
+Style/Documentation:
+  Enabled: false
+
+Style/MultilineOperationIndentation:
+  Enabled: false
+
+Style/CaseIndentation:
+  EnforcedStyle: end
+
+Style/AlignParameters:
+  EnforcedStyle: with_fixed_indentation
+
+Style/FirstParameterIndentation:
+  EnforcedStyle: consistent
+
+Style/TrailingCommaInLiteral:
+  Enabled: false
+
+Style/TrailingCommaInArguments:
+  Enabled: false
+
+Style/SignalException:
+  EnforcedStyle: only_raise
+
+Style/NumericLiterals:
+  Enabled: false
+
+Style/IndentHash:
+  EnforcedStyle: consistent
+
+Metrics/AbcSize:
+  Enabled: false
+
+Metrics/CyclomaticComplexity:
+  Enabled: false
+
+FrozenStringLiteralComment:
+  Enabled: false
+
+Style/RegexpLiteral:
+  Exclude:
+    - test/**/*
+
+Metrics/LineLength:
+  Max: 120
+  Exclude:
+    - test/integration/checkout_externals_test/**/*
+
+Metrics/ClassLength:
+  Enabled: false
+
+Metrics/BlockLength:
+  Enabled: false
+
+Metrics/MethodLength:
+  Enabled: false
+
+Metrics/ParameterLists:
+  Max: 5
+  CountKeywordArgs: false
+
+Metrics/PerceivedComplexity:
+  Enabled: false
+
+Lint/EndAlignment:
+  EnforcedStyleAlignWith: variable
+
+# Customization
+
+Style/ParallelAssignment:
+  Enabled: false
+
+Style/ModuleFunction:
+  Enabled: false
+
+Style/TrivialAccessors:
+  AllowPredicates: true
+
+Lint/UnusedMethodArgument:
+  AllowUnusedKeywordArguments: true
+
+Style/DoubleNegation:
+  Enabled: false
+
+Style/IfUnlessModifier:
+  Enabled: false
+
+# Todo: Not supported for shopify style guide
+
+Style/MultilineBlockChain:
+  Enabled: false
+
+BlockDelimiters:
+  Enabled: false
+
+Style/AccessorMethodName:
+  Enabled: false
+
+Style/MutableConstant:
+  Enabled: false
+
+Style/IndentArray:
+  Enabled: false

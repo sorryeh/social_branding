@@ -1,4 +1,3 @@
----
 name: social-branding
 
 up:
@@ -7,6 +6,21 @@ up:
 
 commands:
   test: bundle exec rake test
+  rake:
+    syntax:
+      optional: args...
+    desc: 'bin/rake ...'
+    run: bin/rake
+  rspec:
+    syntax:
+      optional: args...
+    desc: 'bin/bundle exec rspec'
+    run: bin/bundle exec rspec
+  be:
+    syntax:
+      optional: args...
+    desc: 'bin/bundle exec ...'
+    run: bin/bundle exec
 
 packages:
   - git@github.com:Shopify/dev-shopify.git
